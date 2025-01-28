@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khanquer Tutors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="home-icon">
+                <img src="home-icon.png" alt="Home" class="icon">
+            </a>
+            <u1 class="nav-menu">
+                <li class="nav-item">
+                    <a href="tutors.html" class="nav-link">Our Tutors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="subjects.html" class="nav-link">Subjects Offered</a>
+                </li>
+                <li class="nav-item">
+                    <a href="impact.html" class="nav-link">Our Impact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                </li>
+            </u1>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <header class="hero-section">
+        <div class="hero-content">
+
+            <video autoplay loop muted playsinline class="background-video">
+                <source src="Logo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h1>Khanquer Tutors</h1>
+            <p>Be Greater, Be Smarter, & Conquer Your Way to Academic Success</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p>At <strong>Khanquer Tutors</strong>, we specialize in personalized tutoring that empowers students to excel. Whether it's math, physics, or beyond, our mission is to help you achieve your academic goals with confidence.</p>
+    </section>
+
+    <section class="features-section">
+        <h2>Why Choose Khanquer Tutors?</h2>
+        <ul>
+            <li>Tailored lesson plans to suit individual needs</li>
+            <li>Experienced and passionate tutors</li>
+            <li>Schedule sessions to your desire (24/7 scheduling available!)</li>
+            <li>Proven track record of improving grades. Click on "Our Impact" to see the difference we have made for our students!</li>
+            <li>Book as little or as many sessions as you want!</li>
+        </ul>
+    </section>
+
+    <section class="testimonials-section">
+        <h2>💸 Straight-forward Rates 💸</h2>
+        <p>Book a session with us now and get your first one for free!</p>
+        <cite>$45/hr for online and in-person sessions, contact us for further savings!</cite>
+        <p>All sessions include 1 hour of online support for homework help.</p>
+        <cite>Every session comes with 15 minutes of extended time for free!</cite>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Ready to Khanquer your studies? Get in touch for a free consult today!</p>
+        <cite>Call +1 (647) 878 2973 now to get your questions answered, or send us a message:</cite>
+        <p></p>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTB1FejEY_0N7f7TISdsFU98aXzXsr2yHHC2Rk9u_t819U_w/formResponse" method="post" target="_blank">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="entry.928322870" required
+                placeholder="John Doe">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="entry.1275930207" required
+                placeholder="yourname@example.com">
+            
+            <label for="number">Phone Number</label>
+            <input type="number" id="number" name="entry.922739655" required
+                placeholder="+1 (XXX) XXX-XXXX">
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="entry.1278428771" rows="4" required
+                placeholder="Include student name, grade, subjects, and specific needs (need homework help, better grades on exams etc.) We will get back to you ASAP!"></textarea>
+            <button type="submit" class="cta-button">Submit</button>
+        </form>
+            
+            <div class="social-links">
+                <p>You can also get in touch with us here!</p>
+                <a href="https://www.instagram.com/khanquertutors/" target="_blank" class="instagram-link">
+                    <i class="fab fa-instagram social-icon"></i> Instagram
+                </a>
+            </div>
+    </section>
+    <footer class="footer-section">
+        <p>&copy; 2025 Khanquer Tutors. All Rights Reserved.</p>
+    </footer> 
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            const form = this;
+    
+            // Simulate a delay for processing
+            setTimeout(() => {
+                // Redirect to the thank-you page
+                window.location.href = 'thank-you.html';
+            }, 500); // Adjust the delay if needed (in milliseconds)
+    
+            // Optionally, send the form data to Google Forms (if not using default action)
+            form.submit();
+        });
+    </script>
+</body>
+</html>

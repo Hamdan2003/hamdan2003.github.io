@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Impact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="home-icon">
+                <img src="home-icon.png" alt="Home" class="icon">
+            </a>
+            <u1 class="nav-menu">
+                <li class="nav-item">
+                    <a href="tutors.html" class="nav-link">Our Tutors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="subjects.html" class="nav-link">Subjects Offered</a>
+                </li>
+                <li class="nav-item">
+                    <a href="impact.html" class="nav-link">Our Impact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                </li>
+            </u1>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <section class="impact-section">
+        <h1>Our Impact</h1>
+        <div class="statistics">
+            <div class="stat-box">
+                <h2>568+</h2>
+                <p>Students Helped, & Counting</p>
+            </div>
+            <div class="stat-box">
+                <h2>97%</h2>
+                <p>Students Who Said We Made a Difference</p>
+            </div>
+            <div class="stat-box">
+                <h2>4.86/5</h2>
+                <p>Average Rating</p>
+            </div>
+        </div>
+        <div class="reviews">
+            <h2>Check out a few of the latest reviews from students and parents!</h2>
+            <blockquote>"Khanquer Tutors helped me improve my math grades from a C to an A in just two months!"</blockquote>
+            <cite>– Samantha, a 12th Grade Student</cite>
+            <blockquote>"The tutors are very professional and dedicated. My child’s confidence and performance in his functions class has soared!"</blockquote>
+            <cite>– Michelle, Parent of a 10th Grade Student</cite>
+            <blockquote>"The level of expertise and professionalism for the price you pay is unmatched, highly recommend for all kids who need help."</blockquote>
+            <cite>– Steven, Parent of 7th and 8th Grade Students</cite>
+        </div>
+        <div class="graphs">
+            <!-- <h2>Average Grade Improvement Over Time</h2>
+            <canvas id="gradeImprovementChart"></canvas> -->
+            <img src="grade-improvement.png" alt="Avg Grade Improvement" class="impact-image">
+            <h2>Number of Students Per Subject</h2>
+            <canvas id="otherStatsChart"></canvas>
+        </div>
+    </section>
+    <script>
+        // const gradeImprovementCtx = document.getElementById('gradeImprovementChart').getContext('2d');
+        // const gradeImprovementChart = new Chart(gradeImprovementCtx, {
+        //     type: 'line',
+        //     data: {
+        //         labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+        //         /*datasets: [{
+        //             label: 'Grade Improvement',
+        //             data: [56, 68, 77, 85, 91, 92],
+        //             backgroundColor: 'rgba(233, 69, 96, 0.2)',
+        //             borderColor: 'rgba(233, 69, 96, 1)',
+        //             borderWidth: 1
+        //         }]
+        //     }, */
+        //         datasets: [
+        //             {
+        //                 label: 'Grade Improvement - Group A',
+        //                 data: [56, 68, 77, 85, 91, 92],
+        //                 backgroundColor: 'rgba(233, 69, 96, 0.2)',
+        //                 borderColor: 'rgba(233, 69, 96, 1)',
+        //                 borderWidth: 1
+        //             },
+        //             {
+        //                 label: 'Grade Improvement - Group B',
+        //                 data: [32, 47, 63, 71, 81, 89],
+        //                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        //                 borderColor: 'rgba(54, 162, 235, 1)',
+        //                 borderWidth: 1
+        //             },
+        //             {
+        //                 label: 'Grade Improvement - Group C',
+        //                 data: [70, 76, 83, 84, 91, 96],
+        //                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        //                 borderColor: 'rgba(75, 192, 192, 1)',
+        //                 borderWidth: 1
+        //             }
+        //         ]
+        //     },
+        //     options: {
+        //         scales: {
+        //             y: {
+        //                 beginAtZero: true
+        //             }
+        //         }
+        //     }
+        // });
+
+
+        const otherStatsCtx = document.getElementById('otherStatsChart').getContext('2d');
+        const otherStatsChart = new Chart(otherStatsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Math', 'Physics', 'Chemistry', 'English', 'Test Prep'],
+                datasets: [{
+                    label: 'Percentage of Students',
+                    data: [75, 40, 20, 10, 15],
+                    backgroundColor: [
+                        'rgba(233, 69, 96, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(233, 69, 96, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <footer class="footer-section">
+        <p>&copy; 2025 Khanquer Tutors. All Rights Reserved.</p>
+    </footer> 
+</body>
+</html>

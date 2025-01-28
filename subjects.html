@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects Offered</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="home-icon">
+                <img src="home-icon.png" alt="Home" class="icon">
+            </a>
+            <u1 class="nav-menu">
+                <li class="nav-item">
+                    <a href="tutors.html" class="nav-link">Our Tutors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="subjects.html" class="nav-link">Subjects Offered</a>
+                </li>
+                <li class="nav-item">
+                    <a href="impact.html" class="nav-link">Our Impact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                </li>
+            </u1>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <section class="subjects-section">
+        <h1>Subjects We Offer</h1>
+        <div class="subjects-grid">
+            <a href="#" class="subject-box" data-subject="mathematics">Mathematics</a>
+            <a href="#" class="subject-box" data-subject="physics">Physics</a>
+            <a href="#" class="subject-box" data-subject="chemistry">Chemistry</a>
+            <a href="#" class="subject-box" data-subject="english">English Literature and Writing</a>
+            <a href="#" class="subject-box" data-subject="advanced">AP, IB, and other advanced curriculums</a>
+            <a href="#" class="subject-box" data-subject="testprep">Test Prep (SAT, ACT, etc.)</a>
+        </div>
+        <div class="subject-details" id="subject-details">
+            <h2 id="subject-title"></h2>
+            <p id="subject-description"></p>
+        </div>
+    </section>
+    <script>
+        const subjects = {
+            mathematics: {
+                title: "Mathematics",
+                description: "Did you know almost 80% of all students who require private tutoring do so for Math related subjects? We offer tutoring in Algebra, Geometry, Calculus, Functions, Data Management, and more!"
+            },
+            physics: {
+                title: "Physics",
+                description: "Physics is also one of our most requested subjects to tutor in. Our physics tutors can help you understand the fundamental principles of physics and excel in your studies, assignments, and tests!"
+            },
+            chemistry: {
+                title: "Chemistry",
+                description: "Many students find it hard to wrap their heads around chemistry due to its many rules, exceptions, and density of content. Get help with chemical reactions, equations, concepts, and other tips and tricks from our expert chemistry tutors."
+            },
+            english: {
+                title: "English Literature and Writing",
+                description: "Improve your reading, writing, and analytical skills with our English tutors. Whether English is your first language or not, our tutors can help you improve your skills and grades."
+            },
+            advanced: {
+                title: "AP, IB, and other advanced curriculums",
+                description: "We provide specialized tutoring for advanced curriculums including AP and IB courses. These programs have specific types of assignments and summatives designed to push students' academic boundaries, and we are here to help!"
+            },
+            testprep: {
+                title: "Test Prep (SAT, ACT, etc.)",
+                description: "Prepare for standardized tests like the SAT and ACT with our experienced tutors. Practice tests, Past exams, and special tips and tricks from experience are ready for you here!"
+            }
+        };
+
+        document.querySelectorAll('.subject-box').forEach(box => {
+            box.addEventListener('click', function(event) {
+                event.preventDefault();
+                const subject = subjects[this.dataset.subject];
+                document.getElementById('subject-title').innerText = subject.title;
+                document.getElementById('subject-description').innerText = subject.description;
+                document.getElementById('subject-details').style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
